@@ -1,0 +1,222 @@
+_type: export
+__export_format: 4
+__export_date: 2022-09-04T11:05:08.421Z
+__export_source: insomnia.desktop.app:v2021.4.1
+resources:
+  - _id: req_b97cc21cdb0f40bcaef82b8da45ba87c
+    parentId: fld_4c60a04ccd804298995e0fc1f84abcc8
+    modified: 1662107639616
+    created: 1662107609874
+    url: http://localhost:3000/rent/all
+    name: all
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1662107609874
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_4c60a04ccd804298995e0fc1f84abcc8
+    parentId: wrk_d001989f43864cf5aeb1c9708d373f92
+    modified: 1661957364412
+    created: 1661957364412
+    name: rent
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1661957364412
+    _type: request_group
+  - _id: wrk_d001989f43864cf5aeb1c9708d373f92
+    parentId: null
+    modified: 1661942794189
+    created: 1661942794189
+    name: Cars_rent
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_fa18b04a7d95463a8d34a778691ed607
+    parentId: fld_4c60a04ccd804298995e0fc1f84abcc8
+    modified: 1662289104004
+    created: 1661946178876
+    url: http://localhost:3000/rent/calculate
+    name: calculateCostRent
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "81bd2bc9-29a6-4940-87be-00ab3a7fd17f",
+        	"periodFrom": "2022-09-12 00:00:59",
+        	"periodTo": "2022-09-20 00:01:00"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_02fc263db11944ac801f9d03c6f822e2
+    authentication: {}
+    metaSortKey: -1661946178877
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0d9ed1bed866413cbd106afb5e614abc
+    parentId: fld_4c60a04ccd804298995e0fc1f84abcc8
+    modified: 1662288960555
+    created: 1662034978469
+    url: http://localhost:3000/rent/create-rent-car
+    name: rent-car
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id": "81bd2bc9-29a6-4940-87be-00ab3a7fd17f",
+        	"periodFrom": "2022-09-01 00:00:59",
+        	"periodTo": "2022-09-09 00:00:00"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_02fc263db11944ac801f9d03c6f822e2
+    authentication: {}
+    metaSortKey: -1661944491452.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6f0bacf591704475959fbc4f0da3331c
+    parentId: fld_4c60a04ccd804298995e0fc1f84abcc8
+    modified: 1662115581285
+    created: 1662041076176
+    url: http://localhost:3000/rent/car-availability
+    name: car-availability
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"carId": "29844f36-50cd-4852-9c33-db053428d8b3",
+        	"date": "2022-09-28 00:00:00"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_02fc263db11944ac801f9d03c6f822e2
+    authentication: {}
+    metaSortKey: -1661943647740.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d05eea46814243d8b3c6b85c47beda5c
+    parentId: fld_4c60a04ccd804298995e0fc1f84abcc8
+    modified: 1662288704456
+    created: 1662115986827
+    url: http://localhost:3000/rent/loading-report
+    name: loading-report
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_02fc263db11944ac801f9d03c6f822e2
+    authentication: {}
+    metaSortKey: -1661943225884.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8556925cf66745e99b204dd8f5ee1dd5
+    parentId: fld_084a3461333a4cd596b9feab98fe2a9f
+    modified: 1661957357840
+    created: 1661942804028
+    url: http://localhost:3000/cars/getAll
+    name: getAll
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1661942804028
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_084a3461333a4cd596b9feab98fe2a9f
+    parentId: wrk_d001989f43864cf5aeb1c9708d373f92
+    modified: 1661956326994
+    created: 1661956326994
+    name: cars
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1661956326994
+    _type: request_group
+  - _id: env_82269a685b793fd8939a9d70e1c782fab53f8e13
+    parentId: wrk_d001989f43864cf5aeb1c9708d373f92
+    modified: 1661942794581
+    created: 1661942794581
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1661942794581
+    _type: environment
+  - _id: jar_82269a685b793fd8939a9d70e1c782fab53f8e13
+    parentId: wrk_d001989f43864cf5aeb1c9708d373f92
+    modified: 1661942794591
+    created: 1661942794591
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_d7baa7c777704b0f894b2591eee9dd9c
+    parentId: wrk_d001989f43864cf5aeb1c9708d373f92
+    modified: 1661942794192
+    created: 1661942794192
+    fileName: Cars_rent
+    contents: ""
+    contentType: yaml
+    _type: api_spec

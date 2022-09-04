@@ -1,0 +1,23 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/db/(.*)": "<rootDir>/../libs/db/src/$1",
+    "@app/db": "<rootDir>/../libs/db/src",
+    "@app/cars/(.*)": "<rootDir>/../libs/cars/src/$1",
+    "@app/cars": "<rootDir>/../libs/cars/src",
+    "@app/cars-rent/(.*)": "<rootDir>/../libs/cars-rent/src/$1",
+    "@app/cars-rent": "<rootDir>/../libs/cars-rent/src",
+    "@app/entities/(.*)": "<rootDir>/../libs/entities/src/$1",
+    "@app/entities": "<rootDir>/../libs/entities/src"
+  }
+}

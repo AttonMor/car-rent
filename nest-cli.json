@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "projects": {
+    "db": {
+      "type": "library",
+      "root": "libs/db",
+      "entryFile": "index",
+      "sourceRoot": "libs/db/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/db/tsconfig.lib.json"
+      }
+    },
+    "cars": {
+      "type": "library",
+      "root": "libs/cars",
+      "entryFile": "index",
+      "sourceRoot": "libs/cars/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/cars/tsconfig.lib.json"
+      }
+    },
+    "cars-rent": {
+      "type": "library",
+      "root": "libs/cars-rent",
+      "entryFile": "index",
+      "sourceRoot": "libs/cars-rent/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/cars-rent/tsconfig.lib.json"
+      }
+    },
+    "entities": {
+      "type": "library",
+      "root": "libs/entities",
+      "entryFile": "index",
+      "sourceRoot": "libs/entities/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/entities/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}

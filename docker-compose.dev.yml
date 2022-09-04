@@ -1,0 +1,46 @@
+version: '3.3'
+
+services:
+  db:
+    container_name: 'db'
+    build:
+      context: .
+      dockerfile: ./db/Dockerfile.postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: ${PG_PASS}
+      TZ: Europe/Moscow
+    volumes:
+      - ./docker-data/postgres:/var/lib/postgresql/data
+    networks:
+      - rent-network
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.api
+    container_name: api
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    volumes:
+      - /usr/src/app/node_modules
+      - ./docker-data:/app
+    environment:
+      NODE_ENV: 'production'
+      PG_HOST: db
+      PG_PORT: ${PG_PORT}
+      PG_USER: ${PG_USER}
+      PG_PASS: ${PG_PASS}
+      PG_DB: ${PG_DB}
+      PORT: ${PORT}
+      MAINTENANCE: ${MAINTENANCE}
+      MAX_RENT: ${MAX_RENT}
+    networks:
+      - rent-network
+networks:
+  rent-network:
+    driver: bridge
